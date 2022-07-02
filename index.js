@@ -1,21 +1,14 @@
-// const fs = require("fs");
-// fs.writeFileSync("file.pdf", "code step by step");
+const http = require("http");
+// http
+//   .createServer((req, resp) => {
+//     resp.write("<h1>Hello This is Azhar Siddiqui</h1>");
+//     resp.end();
+//   })
+//   .listen(4500);
 
-// console.log(__dirname);
-let n = 5; // row or column count
-// defining an empty string
-let string = "";
+const runServer = (req, resp) => {
+  resp.write("<h1>Hello Azhar How Are You Today ??</h1>");
+  resp.end();
+};
 
-for (let i = 1; i <= n; i++) {
-  // external loop
-  for (let j = 1; j <= i; j++) {
-    // internal loop
-    // string += "*";
-    console.log("x");
-  }
-  // newline after each row
-  // string += "\n";
-  console.log("\n");
-}
-// printing the string
-// console.log(string);
+http.createServer(runServer).listen(4500);
