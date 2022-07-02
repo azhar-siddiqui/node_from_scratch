@@ -1,2 +1,2 @@
-let colors = require("colors");
-console.log("hello".green);
+const chalk = require("chalk");
+console.log(chalk.green("Hello Azhar How Are you"));
