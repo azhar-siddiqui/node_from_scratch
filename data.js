@@ -17,5 +17,11 @@ const data = [
     Email: "rizansayyed@gmail.com",
     Address: "Sayyed Nager Pune",
   },
+  {
+    Name: "Arshad Sayyed",
+    Contact: "8785246515",
+    Email: "arshadsayyed@gmail.com",
+    Address: "Wanwadi Pune",
+  },
 ];
 module.exports = data;
