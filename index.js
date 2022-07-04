@@ -1,9 +1,21 @@
-const http = require("http");
-const data = require("./data");
-http
-  .createServer((req, resp) => {
-    resp.writeHead(200, { "Content-Type": "application/json" });
-    resp.write(JSON.stringify(data));
-    resp.end();
-  })
-  .listen(4000);
+// console.log(process.argv);
+
+//  const fs = require("fs");
+//  const input = process.argv;
+//  fs.writeFileSync(input[2], input[3]);
+
+const fs = require("fs");
+const input = process.argv;
+
+if (input[2] == "add") {
+  fs.writeFileSync(input[3], input[4]);
+} else if (input[2] == "remove") {
+  fs.unlinkSync(input[3]);
+}
+
+/* OUTPUT */
+// [ 'C:\\Program Files\\nodejs\\node.exe', 'D:\\Node\\index.js' ]
+// Too add file
+// node index.js add orange.txt "Hello Orenge file here"
+// Too remove file
+// node index.js remove orange.text
