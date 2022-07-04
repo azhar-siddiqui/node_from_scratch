@@ -1,11 +1,14 @@
+// TO GET SIMPLE INPUT FROM USER
 // console.log(process.argv);
 
-//  const fs = require("fs");
-//  const input = process.argv;
-//  fs.writeFileSync(input[2], input[3]);
+// const fs = require("fs");
+// const input = process.argv;
+// fs.writeFileSync(input[2], input[3]);
+// To Check Output
+// node index.js hello.txt "Hello File"
 
-const fs = require("fs");
-const input = process.argv;
+// const fs = require("fs");
+// const input = process.argv;
 
 if (input[2] == "add") {
   fs.writeFileSync(input[3], input[4]);
