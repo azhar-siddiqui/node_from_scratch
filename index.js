@@ -1,21 +1,15 @@
-// console.log(process.argv);
-
-//  const fs = require("fs");
-//  const input = process.argv;
-//  fs.writeFileSync(input[2], input[3]);
-
 const fs = require("fs");
-const input = process.argv;
-
-if (input[2] == "add") {
-  fs.writeFileSync(input[3], input[4]);
-} else if (input[2] == "remove") {
-  fs.unlinkSync(input[3]);
+const path = require("path");
+const dirname = path.join(__dirname, "Files");
+for (let i = 0; i < 5; i++) {
+  fs.writeFileSync(`${dirname}/hello_${i}.txt`, `A Hello File`);
 }
 
-/* OUTPUT */
-// [ 'C:\\Program Files\\nodejs\\node.exe', 'D:\\Node\\index.js' ]
-// Too add file
-// node index.js add orange.txt "Hello Orenge file here"
-// Too remove file
-// node index.js remove orange.text
+// TO READ FILES
+/*
+fs.readdir(dirname, (err, files) => {
+  files.forEach((item) => {
+    console.log(`READ FILES => ${item}`);
+  });
+});
+*/
